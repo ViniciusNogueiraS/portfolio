@@ -18,10 +18,18 @@ function App() {
            fontSize: '20px'
         }}
       >
-        Experiências
-        Projetos
-        Skills
+        <article>
+          <h3>Experiências</h3>
 
+        </article>
+        <article>
+          <h3>Projetos</h3>
+
+        </article>
+        <article>
+          <h3>Skills</h3>
+
+        </article>
         <Skeleton count={1} height={'100px'}/>
       </div>
       <footer>

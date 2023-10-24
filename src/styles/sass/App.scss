@@ -1,0 +1,5 @@
+@import 'theme.scss';
+
+.App {
+    @include full_container_style;
+}

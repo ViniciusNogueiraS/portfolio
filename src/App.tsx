@@ -1,22 +1,21 @@
 import React from 'react';
-import Skeleton from 'react-loading-skeleton';
-import 'react-loading-skeleton/dist/skeleton.css';
 
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 
 import Perfil from './components/Perfil';
+import Experiencia from './components/Experiencia';
+import Projeto from './components/Projeto';
+import Skill from './components/Skill';
+import Footer from './components/Footer';
 
-import imagePerfil from './assets/images/perfil0623.jpeg';
+import { experiencias, projetos, skills } from './services/data';
 
 function App() {
   return (
     <div className="App">
       <header>
         <Perfil/>
-        <div className="Col Imagem">
-          <img src={imagePerfil}/>
-        </div>
       </header>
       <div className="Body"
         style={{
@@ -25,27 +24,30 @@ function App() {
       >
         <h3>Experiências</h3>
         <article className="Experiencias">
-          <Skeleton count={1} height={'250px'}/>
-          <Skeleton count={1} height={'250px'}/>
-          <Skeleton count={1} height={'250px'}/>
+          {experiencias.map(exp => (
+            <Experiencia {...exp}/>
+          ))}          
         </article>
         <h3>Projetos</h3>
         <article className="Projetos">
-          <AliceCarousel mouseTracking items={[]}/>
+          <AliceCarousel
+            mouseTracking
+            infinite={true}
+            disableDotsControls={false}
+            disableButtonsControls={true}
+            items={projetos.map(pjt => (
+              <Projeto {...pjt}/>
+            ))}
+          />
         </article>
         <h3>Skills</h3>
         <article className="Skills">
-          <Skeleton count={6} height={'14px'}/>
+          {skills.map(skl => (
+            <Skill {...skl}/>
+          ))}
         </article>
       </div>
-      <footer>
-        <div className="Col">
-          redes sociais
-        </div>
-        <div className="Col">
-          botão de voltar ao topo
-        </div>
-      </footer>
+      <Footer/>
     </div>
   );
 }

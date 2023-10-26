@@ -1,5 +1,12 @@
 @import 'theme.scss';
 
+body {
+    margin: 0;
+}
 .App {
     @include full_container_style;
+
+    h3 {
+        @include titleH2;
+    }
 }

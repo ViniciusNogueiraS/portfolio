@@ -1,0 +1,15 @@
+@import '../sass/theme.scss';
+
+.Experiencia,
+.Projeto,
+.Skill {
+    h4 {
+        @include titleH3;
+    }
+    p {
+        @include paragraph;
+    }
+    span {
+        @include span;
+    }
+}

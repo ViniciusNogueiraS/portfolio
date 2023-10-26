@@ -1,6 +1,6 @@
 export default interface IExperiencia {
     skeleton: JSX.Element,
-    obj: {
+    obj?: {
         title: string,
         text: string,
         date: string

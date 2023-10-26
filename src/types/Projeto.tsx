@@ -1,6 +1,6 @@
 export default interface IProjeto {
     skeleton: JSX.Element,
-    obj: {
+    obj?: {
         image: string,
         title: string,
         text: string

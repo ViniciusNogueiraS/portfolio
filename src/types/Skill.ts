@@ -1,6 +1,6 @@
 export default interface ISkill {
     skeleton: JSX.Element,
-    obj: {
+    obj?: {
         title: string
     }
 } 

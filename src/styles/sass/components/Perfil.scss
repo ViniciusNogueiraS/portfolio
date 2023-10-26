@@ -1,0 +1,43 @@
+@import '../sass/theme.scss';
+
+.Perfil h1 {
+    @include titleH1;
+}
+.Perfil h2 {
+    @include titleH2;
+}
+.Perfil h3 {
+    @include titleH3;
+}
+
+.Perfil {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 12px;
+    padding: $articles_vertical_padding;
+
+    .Imagem {
+        display: flex;
+        justify-content: center;
+        
+        img {
+            border-radius: 50%;
+            width: 160px;
+            aspect-ratio: 1/1;
+        }
+    }
+
+    .Dados {
+        h1,h2,h3 {
+            text-align: center;
+        }
+        .Redes {
+            display: flex;
+            justify-content: center;
+
+        }
+    }
+}
+

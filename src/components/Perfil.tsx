@@ -11,17 +11,17 @@ function Perfil() {
     <div className="Perfil">
       <div className="Imagem">
         <img src={imagePerfil}/>
+        <div className="ControlRedes">
+          <a className="ControlRede Linkedin"><img src={IconLinkedin} alt="Icone Linkedin"/>Linkedin</a>
+          <a className="ControlRede GitHub"><img src={IconGitHub} alt="Icone GitHub"/>GitHub</a>
+          <a className="ControlRede Instagram"><img src={IconInstagram} alt="Icone Instagram"/>Instagram</a>
+          <a className="ControlRede WhatsApp"><img src={IconWhatsApp} alt="Icone WhatsApp"/>WhatsApp</a>
+        </div>
       </div>
       <div className="Dados">
         <h1>Vinícius Nogueira de Souza</h1>
         <h2>Desenvolvedor Web Front-end</h2>
         <h3>Experiências, Projetos e Skills</h3>
-        <div className="Redes">
-          <a><img src={IconLinkedin} alt="Icone Linkedin"/></a>
-          <a><img src={IconGitHub} alt="Icone GitHub"/></a>
-          <a><img src={IconInstagram} alt="Icone Instagram"/></a>
-          <a><img src={IconWhatsApp} alt="Icone WhatsApp"/></a>
-        </div>
       </div>
     </div>
   );

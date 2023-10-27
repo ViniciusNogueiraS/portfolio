@@ -30,18 +30,26 @@ export const projetos: IProjeto[] = [
         skeleton: <Skeleton count={1} height={'250px'}/>,
         obj: {
             image: "",
-            title: "",
-            text: ""
+            title: "Lorem ipsum",
+            text: "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a "
         }
     },
     {
         skeleton: <Skeleton count={1} height={'250px'}/>,
         obj: {
             image: "",
-            title: "",
-            text: ""
+            title: "Lorem ipsum",
+            text: "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a "
         }
     },
+    {
+        skeleton: <Skeleton count={1} height={'250px'}/>,
+        obj: {
+            image: "",
+            title: "Lorem ipsum",
+            text: "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a "
+        }
+    }
 ]
 export const skills: ISkill[] = [
     {

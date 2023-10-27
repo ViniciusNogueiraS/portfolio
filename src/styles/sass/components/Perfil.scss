@@ -21,11 +21,51 @@
     .Imagem {
         display: flex;
         justify-content: center;
+        padding-right: 10rem;
+        margin-right: -10rem;
         
-        img {
+        & > img {
             border-radius: 50%;
             width: 160px;
             aspect-ratio: 1/1;
+            z-index: 10;
+        }
+
+        &:hover {
+            .Linkedin,
+            .GitHub,
+            .Instagram,
+            .WhatsApp {
+                position: relative;
+                transition: all ease .3s;
+            }
+            
+            .Linkedin, .WhatsApp {
+                left: 6rem;
+            }
+            .GitHub, .Instagram {
+                left: 7rem;
+            }
+        }
+        
+        .ControlRedes {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            margin-top: 6px;
+    
+            .ControlRede {
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                width: 100px;
+
+                img {
+                    display: flex;
+                    width: 36px;
+                    height: 36px;
+                }
+            }
         }
     }
 

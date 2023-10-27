@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
@@ -12,8 +12,17 @@ import Footer from './components/Footer';
 import { experiencias, projetos, skills } from './services/data';
 
 function App() {
+
+  const [backgroundText, setBackgroundText] = useState('');
+
+  useEffect(() => {
+    setBackgroundText('Vinícius Nogueira de Souza')
+  }, []);
+
   return (
     <div className="App">
+      <div id="Background">{backgroundText}</div>
+
       <header>
         <Perfil/>
       </header>
@@ -22,26 +31,31 @@ function App() {
            fontSize: '20px'
         }}
       >
-        <h3>Experiências</h3>
         <article className="Experiencias">
+          <h3>Experiências</h3>
           {experiencias.map(exp => (
             <Experiencia {...exp}/>
           ))}          
         </article>
-        <h3>Projetos</h3>
         <article className="Projetos">
+          <h3>Projetos</h3>
           <AliceCarousel
             mouseTracking
             infinite={true}
             disableDotsControls={false}
             disableButtonsControls={true}
+            responsive={{
+              0: {
+                items: 2
+              }
+            }}
             items={projetos.map(pjt => (
               <Projeto {...pjt}/>
             ))}
           />
         </article>
-        <h3>Skills</h3>
         <article className="Skills">
+          <h3>Skills</h3>
           {skills.map(skl => (
             <Skill {...skl}/>
           ))}

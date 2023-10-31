@@ -2,9 +2,10 @@
 //colors
 $color-text-primary: #222222;
 $color-text-secondary: #707070;
-$color-text-terciary: #dfdfdf;
-$color-theme-primary: #112c83;
-$color-theme-secondary: #7696ff;
+$color-text-terciary: #ffffff;
+$color-theme-primary: #1f96ff;
+$color-theme-secondary: #135899;
+$color-theme-background: #1f97ff0e;
 
 //containers sizes
 $full_container_xxsm_width: 640px !default;
@@ -40,7 +41,8 @@ $full_container_padding_lg: 32px !default;
 }
 
 //containers spacements
-$articles_vertical_padding: 60px 0;
+$articles_padding: 32px;
+$articles_margin: 60px 0;
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;900&display=swap');
 

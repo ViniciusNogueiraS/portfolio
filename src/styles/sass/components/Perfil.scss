@@ -16,9 +16,11 @@
     justify-content: flex-start;
     align-items: center;
     row-gap: 12px;
-    padding: $articles_vertical_padding;
+    padding: $articles_padding;
+    margin: $articles_margin;
 
     .Imagem {
+        position: relative;
         display: flex;
         justify-content: center;
         padding-right: 10rem;
@@ -31,20 +33,48 @@
             z-index: 10;
         }
 
+        .Linkedin,
+        .GitHub,
+        .Instagram,
+        .WhatsApp {
+            position: relative;
+            opacity: 0;
+            transition: all ease .3s;
+
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 18px;
+            line-height: 20px;
+            color: $color-text-terciary;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 160px;
+            height: 160px;
+            opacity: 0;
+            background-image: linear-gradient(90deg, $color-theme-secondary, $color-theme-primary);
+            border-radius: 150px;
+            transition: all ease .2s;
+        }
+
         &:hover {
-            .Linkedin,
-            .GitHub,
-            .Instagram,
-            .WhatsApp {
-                position: relative;
-                transition: all ease .3s;
+
+            &::before {
+                opacity: 1;
+                width: 320px;
             }
             
             .Linkedin, .WhatsApp {
-                left: 6rem;
+                opacity: 1;
+                margin-left: 16rem;
             }
             .GitHub, .Instagram {
-                left: 7rem;
+                opacity: 1;
+                margin-left: 17rem;
             }
         }
         
@@ -53,12 +83,18 @@
             display: flex;
             flex-direction: column;
             margin-top: 6px;
+            transition: all ease .3s;
     
             .ControlRede {
                 display: flex;
-                justify-content: end;
+                justify-content: space-between;
                 align-items: center;
                 width: 100px;
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
 
                 img {
                     display: flex;

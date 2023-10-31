@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
@@ -13,16 +13,8 @@ import { experiencias, projetos, skills } from './services/data';
 
 function App() {
 
-  const [backgroundText, setBackgroundText] = useState('');
-
-  useEffect(() => {
-    setBackgroundText('Vinícius Nogueira de Souza')
-  }, []);
-
   return (
     <div className="App">
-      <div id="Background">{backgroundText}</div>
-
       <header>
         <Perfil/>
       </header>

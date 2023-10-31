@@ -17,12 +17,6 @@ function Footer() {
     return (
         <footer>
             <div className="Body">
-                <div className="Redes">
-                    <a><img src={IconLinkedin} alt="Icone Linkedin"/></a>
-                    <a><img src={IconGitHub} alt="Icone GitHub"/></a>
-                    <a><img src={IconInstagram} alt="Icone Instagram"/></a>
-                    <a><img src={IconWhatsApp} alt="Icone WhatsApp"/></a>
-                </div>
                 <button className="BtnToTop" onClick={onClickBtnToTop}>
                     <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_15_2)">
@@ -35,6 +29,12 @@ function Footer() {
                         </defs>
                     </svg>
                 </button>
+                <div className="Redes">
+                    <a><img src={IconLinkedin} alt="Icone Linkedin"/></a>
+                    <a><img src={IconGitHub} alt="Icone GitHub"/></a>
+                    <a><img src={IconInstagram} alt="Icone Instagram"/></a>
+                    <a><img src={IconWhatsApp} alt="Icone WhatsApp"/></a>
+                </div>
             </div>
         </footer>
     );

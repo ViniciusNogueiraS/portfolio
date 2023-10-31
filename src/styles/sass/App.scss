@@ -8,7 +8,14 @@ body {
         @include full_container_style;
 
         article {
-            padding: $articles_vertical_padding;
+            padding: $articles_padding;
+            margin: $articles_margin;
+            border-radius: 15px;
+            background-color: $color-theme-background;
+            border-left: 2px solid $color-theme-primary;
+            border-top: 1px solid $color-theme-primary;
+            border-right: 1px solid $color-theme-primary;
+            border-bottom: 2px solid $color-theme-primary;
         }
         h3 {
             @include titleH2;
@@ -16,7 +23,7 @@ body {
     }
 
     #Background {
-        position: absolute;
+        position: fixed;
         overflow: hidden;
         z-index: -1;
         transform: rotate(90deg);
@@ -25,11 +32,46 @@ body {
         width: 100%;
         height: 98vw;
         
-        font-family: 'Poppins', sans-serif;
-        font-weight: 200;
-        font-style: normal;
-        font-size: 120px;
-        line-height: 120px;
-        color: $color-text-terciary;
+        span {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 200;
+            font-style: normal;
+            font-size: 120px;
+            line-height: 120px;
+            color: $color-theme-primary;
+        }
+    }
+
+    footer {
+        background-color: $color-theme-primary;
+        padding: 60px 0;
+
+        .Body {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .BtnToTop {
+            background-color: transparent;
+            border-left: 2px solid $color-text-terciary;
+            border-top: 1px solid $color-text-terciary;
+            border-right: 1px solid $color-text-terciary;
+            border-bottom: 2px solid $color-text-terciary;
+            border-radius: 12px;
+            width: 42px;
+            height: 42px;
+            cursor: pointer;
+            transition: all ease .3s;
+
+            &:hover {
+                background-color: $color-theme-secondary;
+            }
+
+            svg {
+                filter: invert(1);
+            }
+        }
     }
 }

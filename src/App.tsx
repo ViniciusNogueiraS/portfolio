@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
@@ -11,26 +11,35 @@ import Footer from './components/Footer';
 
 import { experiencias, projetos, skills } from './services/data';
 
+import { ThemeContext } from './contexts/ThemeContextProvider';
+
 function App() {
 
+  const {isDarkTheme, setIsDarkTheme} = useContext(ThemeContext);
+
   return (
-    <div className="App">
+    <div className={`App ${isDarkTheme ? 'dark' : 'light'}`}>
       <header>
         <Perfil/>
+            <button
+              onClick={() => setIsDarkTheme(!isDarkTheme)}
+            >
+              TESTE
+            </button>
       </header>
       <div className="Body"
         style={{
-           fontSize: '20px'
+          fontSize: '20px'
         }}
       >
-        <article className="Experiencias">
-          <h3>Experiências</h3>
+        <article className={`Experiencias ${isDarkTheme ? 'dark' : 'light'}`}>
+          <h3 className={`${isDarkTheme ? 'dark' : 'light'}`}>Experiências</h3>
           {experiencias.map(exp => (
             <Experiencia {...exp}/>
           ))}          
         </article>
-        <article className="Projetos">
-          <h3>Projetos</h3>
+        <article className={`Projetos ${isDarkTheme ? 'dark' : 'light'}`}>
+          <h3 className={`${isDarkTheme ? 'dark' : 'light'}`}>Projetos</h3>
           <AliceCarousel
             mouseTracking
             infinite={true}
@@ -46,8 +55,8 @@ function App() {
             ))}
           />
         </article>
-        <article className="Skills">
-          <h3>Skills</h3>
+        <article className={`Skills ${isDarkTheme ? 'dark' : 'light'}`}>
+          <h3 className={`${isDarkTheme ? 'dark' : 'light'}`}>Skills</h3>
           {skills.map(skl => (
             <Skill {...skl}/>
           ))}

@@ -1,3 +1,51 @@
 footer {
-    
+    &.light {
+        background-color: $color-tl-primary;
+    }
+    &.dark {
+        background-color: $color-td-primary;
+    }
+    padding: 60px 0;
+
+    .Body {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .BtnToTop {
+        background-color: transparent;
+        border-radius: 12px;
+        width: 42px;
+        height: 42px;
+        cursor: pointer;
+        transition: all ease .3s;
+        
+        &.light {
+            border-left: 2px solid $color-tl-text-terciary;
+            border-top: 1px solid $color-tl-text-terciary;
+            border-right: 1px solid $color-tl-text-terciary;
+            border-bottom: 2px solid $color-tl-text-terciary;
+        }
+        &.dark {
+            border-left: 2px solid $color-td-text-terciary;
+            border-top: 1px solid $color-td-text-terciary;
+            border-right: 1px solid $color-td-text-terciary;
+            border-bottom: 2px solid $color-td-text-terciary;
+        }
+
+        &:hover {
+            &.light {
+                background-color: $color-tl-secondary;
+            }
+            &.dark {
+                background-color: $color-td-secondary;
+            }
+        }
+
+        svg {
+            filter: invert(1);
+        }
+    }
 }

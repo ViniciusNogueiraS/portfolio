@@ -5,9 +5,12 @@ import { ThemeContext } from '../contexts/ThemeContextProvider';
 
 function Skill({skeleton, obj}: ISkill) {
 
-  const {isDarkTheme} = useContext(ThemeContext);
+  const {
+    isDarkTheme,
+    isSkeleton,
+  } = useContext(ThemeContext);
 
-  return obj ?(
+  return (obj && !isSkeleton) ?(
     <div className="Skill">
       <h4 className={`${isDarkTheme ? 'dark' : 'light'}`}>{obj.title}</h4>
     </div>

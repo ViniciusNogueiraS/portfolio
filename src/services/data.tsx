@@ -6,10 +6,11 @@ import IProjeto from "../types/Projeto";
 import ISkill from "../types/Skill";
 
 import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css'
 
 export const experiencias: IExperiencia[] = [
     {
-        skeleton: <Skeleton count={1} height={'250px'}/>,
+        skeleton: <Skeleton count={4} height={'14px'}/>,
         obj: {
             title: "Agência M3",
             text: "A mais de dois anos e meio trabalhando com e-commerces na a plataforma Vtex...",
@@ -17,7 +18,7 @@ export const experiencias: IExperiencia[] = [
         }
     },
     {
-        skeleton: <Skeleton count={1} height={'250px'}/>,
+        skeleton: <Skeleton count={4} height={'14px'}/>,
         obj: {
             title: "Análise e Desnvolvimento de Sistemas - Estácio",
             text: "",
@@ -27,7 +28,7 @@ export const experiencias: IExperiencia[] = [
 ]
 export const projetos: IProjeto[] = [
     {
-        skeleton: <Skeleton count={1} height={'250px'}/>,
+        skeleton: <Skeleton count={4} height={'14px'}/>,
         obj: {
             image: "",
             title: "Lorem ipsum",
@@ -35,7 +36,7 @@ export const projetos: IProjeto[] = [
         }
     },
     {
-        skeleton: <Skeleton count={1} height={'250px'}/>,
+        skeleton: <Skeleton count={4} height={'14px'}/>,
         obj: {
             image: "",
             title: "Lorem ipsum",
@@ -43,7 +44,7 @@ export const projetos: IProjeto[] = [
         }
     },
     {
-        skeleton: <Skeleton count={1} height={'250px'}/>,
+        skeleton: <Skeleton count={4} height={'14px'}/>,
         obj: {
             image: "",
             title: "Lorem ipsum",
@@ -53,25 +54,25 @@ export const projetos: IProjeto[] = [
 ]
 export const skills: ISkill[] = [
     {
-        skeleton: <Skeleton count={1} height={'14px'}/>,
+        skeleton: <Skeleton count={4} height={'14px'}/>,
         obj: {
             title: "🔶 HTML5"
         }
     },
     {
-        skeleton: <Skeleton count={1} height={'14px'}/>,
+        skeleton: <Skeleton count={4} height={'14px'}/>,
         obj: {
             title: "✳️ CSS e Sass"
         }
     },
     {
-        skeleton: <Skeleton count={1} height={'14px'}/>,
+        skeleton: <Skeleton count={4} height={'14px'}/>,
         obj: {
             title: "✴️ JavaScript e TypeScript"
         }
     },
     {
-        skeleton: <Skeleton count={1} height={'14px'}/>,
+        skeleton: <Skeleton count={4} height={'14px'}/>,
         obj: {
             title: "🔄 Git"
         }

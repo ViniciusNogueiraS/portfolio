@@ -22,6 +22,11 @@
         justify-content: center;
         padding-right: 10rem;
         margin-right: -10rem;
+
+        @media screen and (max-width: $full_container_sm_width) {
+            padding-right: 100px;
+            margin-right: -100px;
+        }
         
         & > img {
             border-radius: 50%;
@@ -61,6 +66,10 @@
         &.dark::before {background-image: linear-gradient(90deg, $color-td-secondary, $color-td-primary);}
 
         &:hover {
+
+            @media screen and (max-width: $full_container_sm_width) {
+                margin-right: 60px;
+            }
 
             &::before {
                 opacity: 1;

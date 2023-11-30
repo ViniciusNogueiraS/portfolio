@@ -5,9 +5,12 @@ import { ThemeContext } from '../contexts/ThemeContextProvider';
 
 function Projeto({skeleton, obj}: IProjeto) {
 
-  const {isDarkTheme} = useContext(ThemeContext);
+  const {
+    isDarkTheme,
+    isSkeleton,
+  } = useContext(ThemeContext);
   
-  return obj ? (
+  return (obj && !isSkeleton) ? (
     <div className="Projeto">
       <img src={obj.image} alt="Imagem do Projeto"/>
       <div className="ProjetoContent">

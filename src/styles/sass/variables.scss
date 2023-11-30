@@ -1,19 +1,19 @@
 
 //colors Light Theme
-$color-tl-text-primary: #222222;
-$color-tl-text-secondary: #707070;
+$color-tl-text-primary: #061929;
+$color-tl-text-secondary: #648db1;
 $color-tl-text-terciary: #ffffff;
 $color-tl-primary: #1f96ff;
 $color-tl-secondary: #135899;
 $color-tl-background: #1f97ff0e;
 
 //colors Dark Theme
-$color-td-text-primary: red;
-$color-td-text-secondary: red;
-$color-td-text-terciary: red;
-$color-td-primary: red;
-$color-td-secondary: red;
-$color-td-background: red;
+$color-td-text-primary: #cde8ff;
+$color-td-text-secondary: #648db1;
+$color-td-text-terciary: #135899;
+$color-td-primary: #ffffff;
+$color-td-secondary: #cde8ff;
+$color-td-background: #061929;
 
 //containers sizes
 $full_container_xxsm_width: 640px !default;
@@ -27,7 +27,7 @@ $full_container_padding_lg: 32px !default;
 
 @mixin full_container_style {
     & {
-        width: 100%;
+        width: auto;
         margin-right: auto;
         margin-left: auto;
         padding-right: $full_container_padding_sm;
@@ -118,4 +118,14 @@ $articles_margin: 60px 0;
         &.dark {color: $color-td-text-secondary;}
         margin: 2px 0;
     }
+}
+
+//Skeletons
+.light .react-loading-skeleton {
+    --base-color: #cfe6ff !important;
+    --highlight-color: #e0f1ff !important;
+}
+.dark .react-loading-skeleton {
+    --base-color: #0c304f !important;
+    --highlight-color: #254f73 !important;
 }

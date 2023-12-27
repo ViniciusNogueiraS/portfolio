@@ -54,27 +54,27 @@ export const projetos: IProjeto[] = [
 ]
 export const skills: ISkill[] = [
     {
-        skeleton: <Skeleton count={4} height={'14px'}/>,
+        skeleton: <Skeleton count={1} height={'22px'}/>,
         obj: {
-            title: "🔶 HTML5"
+            title: "HTML5"
         }
     },
     {
-        skeleton: <Skeleton count={4} height={'14px'}/>,
+        skeleton: <Skeleton count={1} height={'22px'}/>,
         obj: {
-            title: "✳️ CSS e Sass"
+            title: "CSS e Sass"
         }
     },
     {
-        skeleton: <Skeleton count={4} height={'14px'}/>,
+        skeleton: <Skeleton count={1} height={'22px'}/>,
         obj: {
-            title: "✴️ JavaScript e TypeScript"
+            title: "JavaScript e TypeScript"
         }
     },
     {
-        skeleton: <Skeleton count={4} height={'14px'}/>,
+        skeleton: <Skeleton count={1} height={'22px'}/>,
         obj: {
-            title: "🔄 Git"
+            title: "Git"
         }
     }
 ]

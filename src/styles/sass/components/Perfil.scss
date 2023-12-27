@@ -39,7 +39,7 @@
         .GitHub,
         .Instagram,
         .WhatsApp {
-            position: relative;
+            position: absolute;
             opacity: 0;
             transition: all ease .3s;
 
@@ -50,7 +50,21 @@
             line-height: 20px;
             &.light {color: $color-tl-text-terciary;}
             &.dark {color: $color-td-text-terciary;}
+
+            svg {
+                width: 28px;
+                height: 28px;
+                margin-right: 8px;
+            }
+
+            &.light { svg {fill: $color-tl-text-terciary;} }
+            &.dark { svg {fill: $color-td-text-terciary;} }
         }
+
+        .Linkedin {top: 8px; left: 0;}
+        .GitHub {top: 44px; left: 0;}
+        .Instagram {top: 76px; left: 0;}
+        .WhatsApp {top: 112px; left: 0;}
 
         &::before {
             content: "";
@@ -78,11 +92,11 @@
             
             .Linkedin, .WhatsApp {
                 opacity: 1;
-                margin-left: 16rem;
+                margin-left: 4.5rem;
             }
             .GitHub, .Instagram {
                 opacity: 1;
-                margin-left: 17rem;
+                margin-left: 5.5rem;
             }
         }
         
@@ -95,9 +109,8 @@
     
             .ControlRede {
                 display: flex;
-                justify-content: space-between;
+                justify-content: end;
                 align-items: center;
-                width: 100px;
                 cursor: pointer;
 
                 &:hover {

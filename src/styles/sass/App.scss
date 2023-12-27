@@ -51,6 +51,10 @@ body {
         position: fixed;
         top: 10%;
 
+        @media screen and (max-width: $full_container_xsm_width) {
+            top: 2%;
+        }
+
         .btn {
             display: flex;
             justify-content: center;
@@ -79,6 +83,20 @@ body {
                 padding: 0;
                 margin: 0;
                 opacity: .9;
+            }
+        }
+    }
+
+    .alice-carousel {
+        .alice-carousel__dots-item {
+            width: 24px;
+            height: 12px;
+            border-radius: 12px;
+            background-color: $color-td-text-secondary;
+            
+            &:hover,
+            &.__active {
+                background-color: $color-tl-secondary;
             }
         }
     }

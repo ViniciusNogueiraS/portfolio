@@ -60,11 +60,9 @@ $articles_margin: 60px 0;
         font-weight: 600;
         font-style: normal;
         font-size: 30px;
-        line-height: 32px;
+        line-height: 36px;
         &.light {color: $color-tl-text-primary;}
         &.dark {color: $color-td-text-primary;}
-        
-
         margin: 0;
     }
 }
@@ -74,11 +72,10 @@ $articles_margin: 60px 0;
         font-weight: 400;
         font-style: normal;
         font-size: 24px;
-        line-height: 26px;
+        line-height: 30px;
         letter-spacing: 1.85px;
         &.light {color: $color-tl-text-primary;}
         &.dark {color: $color-td-text-primary;}
-
         margin: 0;
     }
 }
@@ -88,10 +85,9 @@ $articles_margin: 60px 0;
         font-weight: 600;
         font-style: normal;
         font-size: 20px;
-        line-height: 22px;
+        line-height: 28px;
         &.light {color: $color-tl-text-primary;}
         &.dark {color: $color-td-text-primary;}
-
         margin: 1rem 0;
     }
 }
@@ -101,7 +97,7 @@ $articles_margin: 60px 0;
         font-weight: 400;
         font-style: normal;
         font-size: 18px;
-        line-height: 20px;
+        line-height: 28px;
         &.light {color: $color-tl-text-primary;}
         &.dark {color: $color-td-text-primary;}
         margin: 2px 0;

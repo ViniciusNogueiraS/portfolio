@@ -8,6 +8,12 @@
     @include titleH3;
 }
 
+@keyframes pulse {
+    0% { outline: 0px solid $color-tl-primary; }
+    30% { outline: 16px solid rgba(255, 0, 0, 0); }
+    100% { outline: 0px solid transparent; }
+  }
+
 .Perfil {
     display: flex;
     flex-direction: column;
@@ -22,7 +28,7 @@
         justify-content: center;
         padding-right: 10rem;
         margin-right: -10rem;
-
+        
         @media screen and (max-width: $full_container_sm_width) {
             padding-right: 100px;
             margin-right: -100px;
@@ -33,6 +39,7 @@
             width: 160px;
             aspect-ratio: 1/1;
             z-index: 10;
+            animation: 3s ease infinite pulse;
         }
 
         .Linkedin,
@@ -81,6 +88,10 @@
 
         &:hover {
 
+            & > img {
+                animation: none;
+            }
+
             @media screen and (max-width: $full_container_sm_width) {
                 margin-right: 60px;
             }
@@ -97,6 +108,12 @@
             .GitHub, .Instagram {
                 opacity: 1;
                 margin-left: 5.5rem;
+            }
+        }
+
+        &:focus {
+            & > img {
+                animation: none;
             }
         }
         
